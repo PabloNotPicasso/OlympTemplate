@@ -7,12 +7,12 @@ void _Db(const Container<T, D>& c, const string name)
     cout << name << " : ";
     for (const auto& i : c)
         cout << i << " ";
-    cout << '\n';
+    cout << endl;
 }
 template<typename T>
 void _Db(const T& c, const string name)
 {
-    cout << name << " : " << c << '\n';
+    cout << name << " : " << c << endl;
 }
 #ifdef DEBUG
 #define Db(a) _Db(a, #a);
