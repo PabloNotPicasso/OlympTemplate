@@ -51,6 +51,16 @@ public:
         recombine();
     }
 
+    void erase(const ValueType& value)
+    {
+        if (auto itToErase = left.find(value); itToErase != left.end()) {
+            left.erase(itToErase);
+        } else if (auto itToErase = right.find(value); itToErase != right.end()) {
+            right.erase(itToErase);
+        }
+        recombine();
+    }
+
     const ValueType& getMedian() const
     {
         if (empty()) {
