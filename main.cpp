@@ -2,13 +2,6 @@
 using namespace std;
 namespace {
 template<template<typename, typename> typename Container, typename T, typename D>
-istream& operator>>(istream& is, Container<T, D>& container)
-{
-    for (auto& i : container)
-        is >> i;
-    return is;
-}
-template<template<typename, typename> typename Container, typename T, typename D>
 void _Db(const Container<T, D>& c, const string name)
 {
     cout << name << " : ";
