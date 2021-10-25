@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 namespace {
-template<template<typename, typename> typename Container, typename T, typename D>
-void _Db(const Container<T, D>& c, const string name)
+template<typename VType>
+void _Db(const vector<VType>& v, const string name)
 {
     cout << name << " : ";
-    for (const auto& i : c)
+    for (const auto& i : v)
         cout << i << " ";
     cout << endl;
 }
@@ -14,7 +14,7 @@ void _Db(const map<Key, Value>& mp, const string name)
 {
     cout << name << " : \n";
     for (const auto& [key, value] : mp)
-        cout << key << " : " << value << "\n";
+        cout << key << " : " << value << endl;
 }
 template<typename T>
 void _Db(const T& variable, const string name)
